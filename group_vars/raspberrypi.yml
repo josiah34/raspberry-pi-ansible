@@ -7,6 +7,7 @@ common_packages:
   - golang-go
   - ca-certificates
   - curl
+  - shellcheck
 homelab_directory: /opt/homelab
 
 # Placeholders for future roles; currently unused.
