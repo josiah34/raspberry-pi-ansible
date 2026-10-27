@@ -1,0 +1,9 @@
+---
+- name: Configure the Raspberry Pi homelab
+  hosts: raspberrypi
+  become: true
+  # Gather facts about the managed host before running roles.
+  gather_facts: true
+  roles:
+    - common
+    - docker

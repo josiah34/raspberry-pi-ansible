@@ -1,0 +1,32 @@
+# Temporary and editor files
+*.swp
+*.swo
+*~
+*.tmp
+.DS_Store
+.idea/
+.vscode/
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+# Ansible runtime files
+*.retry
+*.log
+.ansible/
+# Secrets and local credentials
+.env
+.env.*
+!.env.example
+secrets/
+credentials/
+*.secret.yml
+*.secret.yaml
+*.pem
+*.key
+.ssh/
+.aws/
+inventory/hosts.local.ini

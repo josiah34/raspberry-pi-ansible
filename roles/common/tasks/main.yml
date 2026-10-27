@@ -1,0 +1,28 @@
+---
+- name: Refresh APT metadata if older than one hour
+  ansible.builtin.apt:
+    update_cache: true
+    cache_valid_time: 3600
+
+- name: Install basic utilities
+  ansible.builtin.apt:
+    name: "{{ common_packages }}"
+    state: present
+
+- name: Create the homelab directory
+  ansible.builtin.file:
+    path: "{{ homelab_directory }}"
+    state: directory
+    owner: "{{ default_user }}"
+    group: "{{ default_user }}"
+    mode: "0755"
+
+- name: Configure the system timezone
+  community.general.timezone:
+    name: "{{ timezone }}"
+
+- name: Enable and start SSH
+  ansible.builtin.service:
+    name: ssh
+    enabled: true
+    state: started

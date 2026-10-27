@@ -1,0 +1,5 @@
+---
+collections:
+  # Provides the timezone module; builtin modules need no extra collection.
+  - name: community.general
+    version: ">=9.0.0,<12.0.0"

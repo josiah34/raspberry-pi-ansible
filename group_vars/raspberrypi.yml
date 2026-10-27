@@ -1,0 +1,15 @@
+---
+# Automatically loaded for hosts in the raspberrypi inventory group.
+# Must match an existing account and primary group on the Pi.
+default_user: joe
+timezone: Europe/Prague
+common_packages:
+  - golang-go
+  - ca-certificates
+  - curl
+homelab_directory: /opt/homelab
+
+# Placeholders for future roles; currently unused.
+docker_users:
+  - "{{ default_user }}"
+docker_daemon_config: {}
